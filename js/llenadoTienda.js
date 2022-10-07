@@ -93,12 +93,13 @@ botom.addEventListener("click",function(event){
     return(pelicula.duracion > 80 && pelicula.genero == 'ciencia ficcion')
 
 })
-        console.log(filtroDuracion)
-        console.log(filtroDuracion.length)
-    
+
+
         let fila=document.getElementById("fila")
         filtroDuracion.forEach(function(producto){
-        fila.innerHTML=""  
+        //fila.innerHTML=""  
+
+        
 
         let columna=document.createElement("div")
         columna.classList.add("col","mt-5")
@@ -134,6 +135,10 @@ botom.addEventListener("click",function(event){
         tarjeta.appendChild(duracion)
         columna.appendChild(tarjeta)
         fila.appendChild(columna)  
+
+        console.log(filtroDuracion)
+        console.log(filtroDuracion.length)
+
     })
 
     })
@@ -143,7 +148,8 @@ botom.addEventListener("click",function(event){
 
 let botom=document.getElementById('botonTodo')
 botom.addEventListener("click",function(event){
-    
+    fila.innerHTML=""  
+
     pintarNetflix()
 
 })
